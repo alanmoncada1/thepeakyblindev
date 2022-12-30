@@ -72,6 +72,10 @@ const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=de
 const IndexPage = () => (
   <Layout>
     <div className={styles.textCenter}>
+      <h1 className="text-3xl font-bold underline text-amber-700">
+        Hello world!
+      </h1>
+
       <StaticImage
         src="../images/example.png"
         loading="eager"
@@ -96,6 +100,7 @@ const IndexPage = () => (
         Edit <code>src/pages/index.js</code> to update this page.
       </p>
     </div>
+
     <ul className={styles.list}>
       {links.map(link => (
         <li key={link.url} className={styles.listItem}>
