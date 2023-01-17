@@ -1,26 +1,16 @@
 import * as React from 'react';
 
-const MobileMenu = () => {
+const MobileMenu = props => {
     return (
-        <div>
-            {/*Mobile menu, show/hide based on menu state.*/}
             <div className="sm:hidden" id="mobile-menu">
-                <div className="space-y-1 px-2 pt-2 pb-3">
-                    {/*Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white"*/}
-                    <a href="#" className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
-                       aria-current="page">Dashboard</a>
-
-                    <a href="#"
-                       className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
-
-                    <a href="#"
-                       className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
-
-                    <a href="#"
-                       className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Calendar</a>
+                <div className="space-y-2 px-2 pt-4 pb-4 text-center">
+                    {
+                        props.items.map(item => <a href={item.route} className={`${item.isActive ? 'bg-teal-600 outline outline-white text-white  text-xl font-sans font-medium' : 'bg-teal-600 text-gray-300 text-xl font-sans font-medium active::text-white '} block px-3 py-2 rounded-md text-base font-medium`}
+                                                aria-current="page">{item.name}</a>
+                        )
+                    }
                 </div>
             </div>
-        </div>
     );
 };
 
