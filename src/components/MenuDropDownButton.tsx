@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Bars3BottomLeftIcon, XMarkIcon } from '@heroicons/react/24/solid';
-import { useState } from "react";
 
+// TODO: Close menu when click outside
 const MenuDropDownButton = props => {
 
     return (

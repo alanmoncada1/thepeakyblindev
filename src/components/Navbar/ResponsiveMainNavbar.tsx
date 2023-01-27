@@ -1,16 +1,17 @@
 import * as React from 'react';
 
-import MobileMenu from "./MobileMenu";
+import ResponsiveLinkMenu from "./ResponsiveLinkMenu";
 import MenuDropDownButton from "../MenuDropDownButton";
 import {useState} from "react";
 import {BellIcon} from "@heroicons/react/24/solid";
+import {Link} from "gatsby";
 
 // TODO: Move it to a query
-const data = [
-    {name: 'Art', isActive: true, route: '/art'},
-    {name: 'Blog', isActive: false, route: '/blog'},
-    {name: 'Devs', isActive: false, route: '/devs'},
-]
+const menuItems = [
+    {name: 'Art', isActive: true, route: '#'},
+    {name: 'Blog', isActive: false, route: '#'},
+    {name: 'Devs', isActive: false, route: '#'},
+];
 
 const ResponsiveMainNavbar = () => {
     const [isMenuDropDownButtonOpen, setIsMenuDropDownButtonOpen] = useState(false);
@@ -31,18 +32,9 @@ const ResponsiveMainNavbar = () => {
                                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
                                  alt="Your Company" />
                     </div>
-                    
-                    <div className="hidden sm:ml-6 sm:block">
-                        <div className="flex space-x-4">
-                            {
-                                data.map(item => <a href={item.route}
-                                                 className={`${ item.isActive ? 'bg-gray-900 text-white ' : 'text-gray-300 hover:bg-gray-700 hover:text-white'} px-3 py-2 rounded-md text-sm font-medium`}
-                                                 aria-current="page">{item.name}</a>
-                                )
-                            }
 
-                         </div>
-                    </div>
+                    {/*Menu Desktop*/}
+                    <ResponsiveLinkMenu items={menuItems} isMobileMenu={false} />
                 </div>
 
                 <div
@@ -61,7 +53,7 @@ const ResponsiveMainNavbar = () => {
         </div>
 
         {/*Show or dissapear menu*/}
-        { isMenuDropDownButtonOpen && <MobileMenu items={data} /> }
+        { isMenuDropDownButtonOpen && <ResponsiveLinkMenu items={menuItems} isMobileMenu={true} /> }
     </nav>
 )
 };

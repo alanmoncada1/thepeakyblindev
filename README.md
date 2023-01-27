@@ -43,4 +43,4 @@ Feel free to use it for your personal applications.
 
     Note: You'll also see a second link: `http://localhost:8000/___graphql`.
 
-    Open the `thepeakyblindev` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+    Open the `thepeakyblindev` directory in your code editor of choice and edit `src/pages/index.tsx`. Save your changes and the browser will update in real time!
