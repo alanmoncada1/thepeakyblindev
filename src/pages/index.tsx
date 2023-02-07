@@ -6,28 +6,41 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import LinkButton from "../components/LinkButton";
 import SectionList from "../components/SectionList";
+import TransitionMessageEffect from "../components/TransitionMessageEffect/TransitionMessageEffect";
 
 const IndexPage = () => (
   <Layout>
 
       {/* Art of the cover image, in the main page. */}
       <StaticImage
+          className={'h-[40vh] w-full'}
           src="../images/wallpaper-art.jpeg"
           layout="constrained"
           loading="wallpaper-art"
           quality={100}
           formats={["auto", "webp", "avif"]}
           alt="wallpaper-art"
-          className={'h-[45vh] w-screen'}
       />
 
       {/* Welcome message */}
-      <div className="flex flex-col space-y-3 text-center m-6 mt-2 p-4 text-gray-800">
-            <h1 className="text-2xl font-bold">Welcome to the tribe</h1>
-            <p className="font-medium leading-loose">Hey, Welcome to my personal website! here I'm all about solving problems and getting creative. Whether you're looking to improve your coding skills, read some poetry, or check out some cool photography.</p>
-            <p className="font-medium leading-loose">I hope you'll enjoy it.</p>
-            <LinkButton text="Explore" link="#" />
+      <div className="flex flex-col space-y-3 items-center text-center m-6 mt-2 p-4 text-gray-800
+                       lg:pr-96 lg:pl-96 lg:space-y-5">
+
+            {/*Welcome message effect*/}
+            <Link to={'#'}>
+                  <TransitionMessageEffect
+                      className="text-2xl text-gray-600 font-bold cursor-pointer
+                        lg:text-4xl
+                        hover:text-indigo-400" />
+            </Link>
+
+            <h1 className="text-gray-700 text-2xl font-bold lg:text-4xl">The Peakyblindevs</h1>
+            <p className="text-gray-600 font-medium leading-loose lg:text-xl">Hey, Welcome to my personal website! here I'm all about solving problems and getting creative. Whether you're looking to improve your coding skills, read some poetry, or check out some cool photography.</p>
+            <p className="text-gray-600 font-bold leading-loose lg:text-2xl">I hope you'll enjoy it.</p>
+
+            <LinkButton className="w-11/12 lg:w-40" text="Explore" link="#" />
       </div>
+
       {/* Main Sections */}
       <SectionList sections={null}/>
 
