@@ -1,33 +1,40 @@
 import * as React from 'react';
-import SocialMediaButtons from "./SocialMediaButtons";
+import SocialMediaButtons from "../SocialMediaIcons/SocialMediaButtons";
 
 const Footer = () => {
     return (
         <footer>
-            <div className="container mx-auto text-center">
-                <div className="flex flex-col items-center">
+            <div className="container mx-auto flex flex-col-reverse my-10 lg:my-14 lg:inline-grid lg:grid-cols-2">
+                <div className="text-center">
+                    <p className="text-sm mt-8">Copyright &copy; {new Date().getFullYear()} &middot; thepeakyblindev.com</p>
+                </div>
 
-                    <div className="lg:hidden p-6 space-y-6">
-                        <h3 className="text-gray-600 font-bold leading-loose">Follow me for more</h3>
-                        <SocialMediaButtons />
+                <div className="flex flex-col text-center space-y-8 lg:space-y-1">
+
+                    <div className="hidden lg:block self-end">
+                        <SocialMediaButtons type="grayIcons"/>
                     </div>
 
-                    <h3 className="text-lg font-medium mb-4">Suscríbete a mi blog</h3>
+                    <div className="lg:hidden space-y-4">
+                        <h3 className="text-gray-600 font-bold leading-loose">Follow me for more</h3>
+                        <SocialMediaButtons type="color"/>
+                    </div>
 
-                    <form className="flex flex-col items-center">
+                    <div className="space-y-4">
+                        <h3 className="text-lg font-medium mb-4 text-gray-600">Suscríbete a mi blog</h3>
 
-                        <input type="email" placeholder="Tu correo electrónico" className="bg-white border border-gray-400 p-2 mb-4"/>
-
-                        <button type="submit" className="bg-green-400 text-white p-2 rounded">
-                            Suscribirse
-                        </button>
-
-                    </form>
-
-
-
+                        <form className="flex justify-center space-x-2">
+                            <input type="email" placeholder="Tu correo electrónico"
+                                   className="bg-white border border-gray-400 p-2 rounded-md ring-1 ring-teal-700"/>
+                            <button type="submit"
+                                    className="bg-teal-700 text-white p-2 rounded-md text-white font-medium transition w-auto
+                                               hover:delay-150 hover:duration-300 hover:bg-teal-700 hover:ring hover:ring-2 hover:ring-teal-700 hover:ring-offset-2 hover:ring-offset-white">
+                                Suscribirse
+                            </button>
+                        </form>
+                    </div>
                 </div>
-                <p className="text-sm mt-8">Copyright &copy; {new Date().getFullYear()} &middot; thepeakyblindev.com</p>
+
             </div>
         </footer>
     );
