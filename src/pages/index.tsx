@@ -31,14 +31,14 @@ const IndexPage = () => (
                   <TransitionMessageEffect
                       className="text-2xl text-gray-600 font-bold cursor-pointer
                         lg:text-4xl
-                        hover:text-indigo-400" />
+                        hover:text-indigo-400 font-sans" />
             </Link>
 
-            <h1 className="text-gray-700 text-2xl font-bold lg:text-4xl">The Peakyblindevs</h1>
-            <p className="text-gray-600 font-medium leading-loose lg:text-xl">Hey, Welcome to my personal website! here I'm all about solving problems and getting creative. Whether you're looking to improve your coding skills, read some poetry, or check out some cool photography.</p>
-            <p className="text-gray-600 font-bold leading-loose lg:text-2xl">I hope you'll enjoy it.</p>
+            <h1 className="text-gray-700 text-2xl font-bold lg:text-4xl font-sans">The Peakyblindevs</h1>
+            <p className="text-gray-600 font-medium leading-loose lg:text-xl font-serif">Hey, Welcome to my personal website! here I'm all about solving problems and getting creative. Whether you're looking to improve your coding skills, read some poetry, or check out some cool photography.</p>
+            <p className="text-gray-600 font-bold leading-loose lg:text-2xl font-sans">I hope you'll enjoy it.</p>
 
-            <LinkButton className="w-11/12 lg:w-40" text="Explore" link="#" />
+            <LinkButton className="w-11/12 lg:w-40 font-sans" text="Explore" link="#" />
       </div>
 
       {/* Main Sections */}
