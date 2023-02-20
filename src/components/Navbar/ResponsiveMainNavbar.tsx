@@ -17,7 +17,7 @@ const ResponsiveMainNavbar = () => {
     const [isMenuDropDownButtonOpen, setIsMenuDropDownButtonOpen] = useState(false);
 
     return (
-    <nav className="bg-teal-700">
+    <nav className="bg-primary">
         <div className="mx-auto max-w-screen-lg px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
 

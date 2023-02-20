@@ -27,8 +27,8 @@ const Footer = () => {
                             <input type="email" placeholder="Tu correo electrónico"
                                    className="bg-white border border-gray-400 p-2 rounded-md ring-1 ring-teal-700"/>
                             <button type="submit"
-                                    className="bg-teal-700 text-white p-2 rounded-md text-white font-medium transition w-auto
-                                               hover:delay-150 hover:duration-300 hover:bg-teal-700 hover:ring hover:ring-2 hover:ring-teal-700 hover:ring-offset-2 hover:ring-offset-white">
+                                    className="bg-primary text-white p-2 rounded-md text-white font-medium transition w-auto
+                                               hover:delay-150 hover:duration-300 hover:bg-primary hover:ring hover:ring-2 hover:ring-teal-700 hover:ring-offset-2 hover:ring-offset-white">
                                 Suscribirse
                             </button>
                         </form>

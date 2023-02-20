@@ -12,7 +12,11 @@ module.exports = {
             serif: ['Merriweather', 'serif'], // Font style for subtitles
         },
 
-        extend: {},
+        extend: {
+            colors: {
+                primary: '#0f766e'
+            }
+        },
     },
 
     plugins: [],

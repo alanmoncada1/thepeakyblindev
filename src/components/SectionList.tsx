@@ -24,7 +24,7 @@ const data = [{
 
 const SectionList = props => {
     return (
-        <div className="bg-teal-700 md:h-full flex items-center text-gray-600">
+        <div className="bg-primary md:h-full flex items-center text-gray-600">
             <div className="container px-5 py-24 mx-auto">
                 {/*Title */}
                 <div className="text-center mb-12">
