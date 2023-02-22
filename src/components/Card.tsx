@@ -12,9 +12,9 @@ const Card = (props: CardInterface) => {
 
                 <div className="p-6">
                     <h3 className="text-base font-medium text-indigo-700 mb-1 transition duration-300 ease-in
-                                    group-hover:text-gray-200 font-sans">{props.date}</h3>
-                    <h2 className="text-2xl font-semibold mb-3 font-sans">{props.title}</h2>
-                    <p className="leading-relaxed mb-3 font-serif" dangerouslySetInnerHTML={{__html: props.description}}></p>
+                                    group-hover:text-gray-200 font-serif">{props.date}</h3>
+                    <h2 className="text-2xl font-semibold mb-3 font-serif">{props.title}</h2>
+                    <p className="leading-relaxed mb-3 font-serif tracking-wide" dangerouslySetInnerHTML={{__html: props.description}}></p>
 
                     <div className="flex items-center flex-wrap">
                         <span className="text-indigo-700 inline-flex items-center md:mb-2 lg:mb-0 transition duration-300 ease-in
