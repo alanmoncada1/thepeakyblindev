@@ -30,7 +30,7 @@ const ColorCircleIcons = () => {
                         hover:shadow-lg focus:shadow-lg 
                         focus:outline-none focus:ring-0 
                         active:shadow-lg transition duration-150 ease-in-out`}>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" className="w-4 h-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox={icon.svgPosition} className="w-5 h-5">
                         {icon.iconCode}
                     </svg>
                 </Link>

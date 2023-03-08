@@ -21,15 +21,15 @@ const Footer = () => {
                     </div>
 
                     <div className="space-y-4">
-                        <h3 className="text-lg font-medium mb-4 text-gray-600">Suscríbete a mi blog</h3>
+                        <h3 className="text-lg font-medium mb-4 text-gray-600">Subscribe to my blog</h3>
 
                         <form className="flex justify-center space-x-2">
-                            <input type="email" placeholder="Tu correo electrónico"
+                            <input type="email" placeholder="Your mail"
                                    className="bg-white border border-gray-400 p-2 rounded-md ring-1 ring-teal-700"/>
                             <button type="submit"
                                     className="bg-primary text-white p-2 rounded-md text-white font-medium transition w-auto
                                                hover:delay-150 hover:duration-300 hover:bg-primary hover:ring hover:ring-2 hover:ring-teal-700 hover:ring-offset-2 hover:ring-offset-white">
-                                Suscribirse
+                                Subscribe
                             </button>
                         </form>
                     </div>
