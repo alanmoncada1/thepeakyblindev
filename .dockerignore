@@ -1,0 +1,13 @@
+# Ignore Git & caches
+.git
+.cache
+.idea
+*.iml
+
+# Ignore source code & dependencies
+node_modules
+.env.local
+.eslintrc.json
+.gitignore
+.editorconfig
+
