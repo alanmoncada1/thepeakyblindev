@@ -14,3 +14,6 @@ RUN apk add --update nodejs npm nginx\
 
 EXPOSE $PORT
 CMD ["nginx", "-g", "daemon off;"]
+
+https://github.com/bitovi/github-actions-deploy-docker-to-ec2.git
+https://github.com/alanmoncada1/thepeakyblindev.git

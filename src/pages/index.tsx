@@ -42,7 +42,7 @@ const IndexPage = () => (
       </div>
 
       {/* Main Sections */}
-      <SectionList sections={null}/>
+      <SectionList section={null}/>
 
   </Layout>
 )

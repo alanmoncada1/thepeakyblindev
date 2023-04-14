@@ -1,8 +1,8 @@
 import * as React from 'react';
 import Card from "./Card";
+import {useEffect, useState} from "react";
 
-
-const data = [{
+const data = Promise.resolve([{
     "date": "January 1, 2022",
     "description": "<b>Do you have 5 min?</b> Step into the world of Stories and Reflections, where every tale will leave you breathless and every reflection will ignite a fire within you. Get ready for a journey of self-discovery and be inspired by the passion and depth of these carefully crafted stories and thoughts.",
     "title": "Take a look into my blog!",
@@ -20,9 +20,21 @@ const data = [{
     "title": "Fool me once...",
     "link": "www.example.com/april-fools",
     "imageUrl": "https://images.unsplash.com/photo-1674665895191-6ee1ac923ba2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80"
-}];
+}]);
 
 const SectionList = props => {
+    // List of sections
+    const [sections, setSections] = useState([]);
+
+    useEffect(() => {
+        // IIFE To resolve the promise.
+        (async () => {
+            const result = await data;
+
+            setSections(result);
+        })();
+    });
+
     return (
         <div className="bg-primary md:h-full flex items-center text-gray-600">
             <div className="container px-5 py-24 mx-auto">
@@ -34,7 +46,7 @@ const SectionList = props => {
                 {/*List of items*/}
                 <div className="flex flex-wrap -m-4">
                     {
-                        data.map(item => <Card date={item.date} description={item.description} title={item.title} link={item.link} imageUrl={item.imageUrl} />)
+                        sections.map(item => <Card date={item.date} description={item.description} title={item.title} link={item.link} imageUrl={item.imageUrl} />)
                     }
 
                 </div>
