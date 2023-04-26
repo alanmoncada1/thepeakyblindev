@@ -38,7 +38,7 @@ const IndexPage = () => (
             <p className="text-gray-600 font-medium leading-loose lg:text-xl font-serif">Hey, Welcome to my personal website! here I'm all about solving problems and getting creative. Whether you're looking to improve your coding skills, read some poetry, or check out some cool photography.</p>
             <p className="text-gray-600 font-bold leading-loose lg:text-2xl font-sans">I hope you'll enjoy it.</p>
 
-            <LinkButton className="w-11/12 lg:w-40 font-sans" text="Explore" link="#" />
+            <LinkButton className="w-11/12 lg:w-40" text="Explore" link="explore" />
       </div>
 
       {/* Main Sections */}

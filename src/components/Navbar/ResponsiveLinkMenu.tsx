@@ -12,7 +12,7 @@ const ResponsiveLinkMenu = (props: ResponsiveLinkMenuInterface) => {
                         <Link to={item.route} aria-current="page"
                             className="text-gray-300 px-3 py-2 rounded-md text-sm font-medium
                              transition hover:duration-200 hover:delay-100 hover:ring-1 hover:ring-white hover:text-white
-                              focus:duration-150 focus:delay-100 focus:bg-white focus:ring-2 focus:ring-offset-2 focus:ring-offset-teal-700 focus:ring-white focus:text-black">
+                              focus:duration-150 focus:delay-100 focus:bg-slate-50 focus:ring-2 focus:ring-offset-2 focus:ring-offset-teal-700 focus:ring-white focus:text-black">
                             {item.name}
                         </Link>
                     )
@@ -29,7 +29,7 @@ const ResponsiveLinkMenu = (props: ResponsiveLinkMenuInterface) => {
                     props.items.map(item =>
                         <Link to={item.route} aria-current="page"
                             className="bg-teal-600 text-gray-300 text-xl font-sans block px-3 py-4 rounded-md text-base transition
-                            focus:duration-200 focus:delay-100 focus:bg-white focus:ring-2 focus:ring-offset-4 focus:ring-offset-teal-700 focus:ring-white focus:text-black">{item.name}</Link>
+                            focus:duration-200 focus:delay-100 focus:bg-slate-50 focus:ring-2 focus:ring-offset-4 focus:ring-offset-teal-700 focus:ring-white focus:text-black">{item.name}</Link>
                     )
                 }
             </div>

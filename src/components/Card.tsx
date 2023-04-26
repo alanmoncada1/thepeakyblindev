@@ -5,7 +5,7 @@ import {Link} from "gatsby";
 const Card = (props: CardInterface) => {
     return (
         <Link to={props.link} className="p-4 sm:w-1/2 lg:w-1/3 cursor-pointer">
-            <div className="bg-white h-full ring ring-3 ring-gray-100 rounded-lg overflow-hidden transition duration-300 ease-in group
+            <div className="bg-slate-50 h-full ring ring-3 ring-gray-100 rounded-lg overflow-hidden transition duration-300 ease-in group
                     hover:bg-gray-700 hover:text-gray-200">
                 <img className="h-72 lg:h-72 md:h-48 w-full object-cover object-center"
                      src={props.imageUrl} alt="blog"/>

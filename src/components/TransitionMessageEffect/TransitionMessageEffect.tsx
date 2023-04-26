@@ -17,7 +17,7 @@ const TransitionMessageEffect = (props: TransitionMessageEffectInterface) => {
             "Bienvenue",
             "Willkommen",
         ],
-    })
+    });
 
     // loops over chars to transition a text to another
     const transition = (start: string, end: string): void => {

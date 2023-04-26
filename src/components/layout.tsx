@@ -23,13 +23,11 @@ const Layout = ({children}) => {
     `)
 
     return (
-        <>
+        <div className="bg-slate-50 h-screen">
             <Header siteTitle={data.site.siteMetadata?.title || `Title`}/>
-            <div>
-                <main>{children}</main>
-                <Footer/>
-            </div>
-        </>
+            <main>{children}</main>
+            <Footer/>
+        </div>
     )
 }
 
