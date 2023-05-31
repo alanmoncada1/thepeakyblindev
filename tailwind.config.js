@@ -13,6 +13,15 @@ module.exports = {
         },
 
         extend: {
+            // 1rem is equal to 4 units
+            height: {
+                '45': '11.25rem',
+                '45.5': '11.36rem',
+                '46': '11.5rem',
+                '46.5': '11.62rem',
+                '47': '11.75rem',
+                '47.5': '11.86rem',
+            },
             colors: {
                 primary: '#0f766e'
             }

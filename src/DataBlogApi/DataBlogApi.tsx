@@ -1,4 +1,4 @@
-import {sectionsMock} from "./DataBlogApiMock";
+import {postsMock, sectionsMock} from "./DataBlogApiMock";
 import ApiResponseDto from "../model/ApiResponseDTO";
 
 /**
@@ -15,6 +15,18 @@ export default class DataBlogApi {
             success: true,
             message: "Mock Sections Successful.",
             data: sectionsMock.data
+        });
+    }
+
+    /**
+     * GetPost: Returns the posts to navigate through the explore section.
+     * @return Promise<ApiResponseDto>
+     */
+    static getPost(): Promise<ApiResponseDto> {
+        return Promise.resolve({
+            success: true,
+            message: "Mock Posts Successful.",
+            data: postsMock.data
         });
     }
 }
