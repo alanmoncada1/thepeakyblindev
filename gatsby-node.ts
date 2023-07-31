@@ -3,6 +3,7 @@
  *
  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/
  */
+import type { GatsbyNode } from "gatsby"
 
 /**
  * @type {import('gatsby').GatsbyNode['createPages']}
@@ -15,4 +16,10 @@ exports.createPages = async ({ actions }) => {
     context: {},
     defer: true,
   })
+}
+
+export const sourceNodes: GatsbyNode[`sourceNodes`] = async (gatsbyApi) => {
+  const { reporter } = gatsbyApi
+
+  reporter.info(`Example plugin sourceNodes...`)
 }
