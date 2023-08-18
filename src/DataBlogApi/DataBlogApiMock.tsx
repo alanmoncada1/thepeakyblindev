@@ -110,3 +110,6 @@ export const postsMock = {
         contentTypeId: 1,
     }]
 };
+
+// Blog Cover Image
+export async function getUnsplashServerData() {}

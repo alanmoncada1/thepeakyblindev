@@ -1,11 +1,21 @@
-import {postsMock, sectionsMock} from "./DataBlogApiMock";
+import {postsMock, sectionsMock, getUnsplashServerData} from "./DataBlogApiMock";
 import ApiResponseDto from "../model/ApiResponseDTO";
+import UnsplashApiServer from "./UnsplashApiServer";
+import { UnsplashResponseInterface } from "../model/Types";
 
 /**
  * DataBlogApi Class: This class handle the data api requests.
  *
  */
 export default class DataBlogApi {
+    /**
+     * Get Cover Image: Returns the cover image for the blog post.
+     * @return ApiResponseDto
+     */
+    static getCoverImage(): Promise<ApiResponseDto> {
+        return UnsplashApiServer.getRandomImage();
+    }
+
     /**
      * GetSections: Returns the main sections to navigate through the secondary sections.
      * @return Promise<ApiResponseDto>
